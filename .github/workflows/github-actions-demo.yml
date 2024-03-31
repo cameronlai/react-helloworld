@@ -15,5 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ secrets.AWS_ACCESS_TOKEN }}."
+      - run: echo "The secret access id is ${{ secrets.AWS_ACCOUNT_ID }}"
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
